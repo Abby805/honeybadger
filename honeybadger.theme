@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Some commonly used preprocess functions.
+ */
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function honeybadger_form_search_block_form_alter(&$form, $form_state) {
+  $form['keys']['#attributes']['placeholder'] = t('Search');
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function honeybadger_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  switch ($variables['element']['#field_name']) {
+    case 'field_something':
+    case 'field_something_else':
+      $suggestions[] = 'field__no_wrappers';
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function honeybadger_preprocess_field(&$variables, $hook) {
+  $field_name = $variables['field_name'];
+
+  // Add a class specifying what field we're looking at.
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+  $name_class = 'field-name--' . $field_name;
+  $variables['attributes']['class'][] = $name_class;
+
+  // Add a class to field labels.
+  if (!isset($variables['title_attributes']['class'])) {
+    $variables['title_attributes']['class'] = [];
+  }
+  $variables['title_attributes']['class'][] = 'field-label';
+  $variables['title_attributes']['class'][] = 'field-label--' . $field_name;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for media.
+ */
+function honeybadger_preprocess_media(&$variables) {
+  $mediaType = $variables['media']->bundle();
+  $variables['attributes']['class'][] = 'media-entity';
+  $variables['attributes']['class'][] = 'media-type--' . $mediaType;
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function honeybadger_preprocess_menu(&$variables) {
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+
+  if (!isset($variables['menu_name'])) {
+    return;
+  }
+
+  $variables['attributes']['class'][] = 'menu--' . $variables['menu_name'];
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function honeybadger_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $type = $node->getType();
+  $mode = $variables['view_mode'];
+  $variables['attributes']['class'][] = 'node-type-' . $type;
+  $variables['attributes']['class'][] = 'node-type-' . $mode;
+  $variables['attributes']['class'][] = 'node-type-' . $type . '-' . $mode;
+}

@@ -1,0 +1,12 @@
+name: Honey Badger
+type: theme
+description: "Don't Care"
+core: 8.x
+base theme: false
+libraries:
+  - honeybadger/global-styling
+  - honeybadger/global-scripts
+regions:
+  header: Header
+  content: Content
+  footer: Footer

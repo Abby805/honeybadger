@@ -1,0 +1,48 @@
+honeybadger.hero.sm:
+  label: Small
+  mediaQuery: ''
+  weight: 0
+  group: Hero Image
+  multipliers:
+    - 1x
+    - 2x
+honeybadger.hero.md:
+  label: Medium
+  mediaQuery: '(min-width: 768px)'
+  weight: 1
+  group: Hero Image
+  multipliers:
+    - 1x
+    - 2x
+honeybadger.hero.lg:
+  label: Large
+  mediaQuery: '(min-width: 1168px)'
+  weight: 2
+  group: Hero Image
+  multipliers:
+    - 1x
+    - 2x
+honeybadger.tile.sm:
+  label: Default
+  mediaQuery: ''
+  weight: 0
+  group: Tile Image
+  multipliers:
+    - 1x
+    - 2x
+honeybadger.tile.md:
+  label: Medium
+  mediaQuery: '(min-width: 768px)'
+  weight: 1
+  group: Tile Image
+  multipliers:
+    - 1x
+    - 2x
+honeybadger.tile.lg:
+  label: Large
+  mediaQuery: '(min-width: 1168px)'
+  weight: 2
+  group: Tile Image
+  multipliers:
+    - 1x
+    - 2x

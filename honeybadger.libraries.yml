@@ -1,0 +1,18 @@
+global-styling:
+  version: 1.x
+  css:
+    base:
+      css/styles.css: {}
+      /libraries/some-library/some-library.css: {}
+      //fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i: { type: external, minified: true }
+
+global-scripts:
+  version: 1.x
+  js:
+    /libraries/some-library/some-library.min.js: {}
+    js/example-d8-js.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.debounce

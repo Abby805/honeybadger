@@ -1,7 +1,6 @@
 {
-  "name": "tag-gulp-starter",
+  "name": "honeybadger",
   "version": "0.1.0",
-  "sasslintConfig": "sass-lint.yml",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.6",

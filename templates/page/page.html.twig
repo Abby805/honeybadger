@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Custom theme implementation to display a single page.
+ */
+#}
+
+<header class="site-header" role="banner">
+  <a href="{{ path('<front>') }}" class="site-logo__link">
+    {{ 'Logo Goes Here'|t }}
+  </a>
+
+  {{ page.header }}
+</header>
+
+<main role="main" class="main-content">
+  {{ page.content }}
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  {{ page.footer }}
+</footer>
