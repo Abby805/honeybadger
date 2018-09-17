@@ -57,4 +57,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('icons', ['optimize-images', 'iconfont', 'scss']);
+gulp.task('build', ['icons']);
 gulp.task('default', ['scss', 'watch']);
