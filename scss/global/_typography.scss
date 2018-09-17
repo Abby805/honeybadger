@@ -4,36 +4,47 @@ html {
   // You should ALWAYS have this line, unchanged.
   // The px-to-rem function depends on it.
   font-size: ($font-size-base/16) * 100%;
+  // Prevent adjustments of font size after orientation changes in iOS
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   // Will probably declare fonts, colors, etc. as desired. Examples:
   // font-family: $font-family-sans;
   // font-weight: $font-weight-normal;
+  // line-height: 1.4;
   // color: $c-black;
 }
 
-h1 {
+// Adding the h1-style, etc. classes for use in cases when the design doesn't
+// match what the tag ought to be, semantically.
+h1,
+.h1-style {
 
 }
 
-h2 {
+h2,
+.h2-style {
 
 }
 
-h3 {
+h3,
+.h3-style {
 
 }
 
-h4 {
+h4,
+.h4-style {
 
 }
 
-h5 {
+h5,
+.h5-style {
 
 }
 
-h6 {
+h6,
+.h6-style {
 
 }
 
@@ -101,6 +112,10 @@ sub {
   top: 0.2em;
 }
 
+small {
+
+}
+
 // Undoing the ugly blue glow that defaults when you focus on a link or anything
 // with a tabindex. Put focus state back on links below.
 *:focus {
@@ -108,7 +123,6 @@ sub {
 }
 
 a {
-
   &:hover,
   &:focus {
 
