@@ -36,15 +36,6 @@ $bp-sm: 35em; //560px
 $bp-md: 60em; //960px
 $bp-lg: 75em; //1200px
 
-// Susy grid default example
-// See documentation at http://oddbird.net/susy/docs/
-$susy: (
-  'columns': susy-repeat(12),
-  'gutters': 0.25,
-  'spread': 'narrow',
-  'container-spread': 'narrow',
-);
-
 // Examples of commonalities to keep consistent across the site
 // $border-radius: 5px;
 // $transition: all 0.3s ease;
