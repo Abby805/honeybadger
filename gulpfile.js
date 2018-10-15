@@ -1,7 +1,5 @@
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
-    rename      = require('gulp-rename'),
-    cache       = require('gulp-cached'),
     prefix      = require('autoprefixer'),
     notify      = require('gulp-notify'),
     postcss     = require('gulp-postcss'),
